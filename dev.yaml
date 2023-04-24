@@ -1,0 +1,14 @@
+releases:
+  - name: hello-dev
+    namespace: default
+    chart: stable/nginx-ingress
+    version: "1.41.3"
+    values:
+      - ../values.yaml
+      - values-dev.yaml
+    set:
+      - ingress.enabled=true
+      - ingress.annotations."kubernetes\.io/ingress\.class"=nginx
+      - ingress.annotations."nginx\.ingress\.kubernetes\.io/ssl-redirect"=false
+      - ingress.hosts[0].host=dev.example.com
+      - ingress.hosts[0].paths[0]=/

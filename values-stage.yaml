@@ -1,0 +1,5 @@
+image:
+  repository: nginxdemos/hello
+  tag: latest
+  environment: stage
+  secret: "some-secret-value-for-stage"

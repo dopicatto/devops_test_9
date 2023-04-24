@@ -1,0 +1,5 @@
+image:
+  repository: nginxdemos/hello
+  tag: latest
+  environment: dev
+  secret: "some-secret-value-for-dev"
